@@ -1,0 +1,126 @@
+{
+  "languageModel": {
+    "intents": [
+      {
+        "name": "AMAZON.CancelIntent",
+        "samples": [
+          "Round timer cancel"
+        ]
+      },
+      {
+        "name": "AMAZON.HelpIntent",
+        "samples": [
+          "Round timer help"
+        ]
+      },
+      {
+        "name": "AMAZON.StopIntent",
+        "samples": [
+          "Round timer stop"
+        ]
+      },
+      {
+        "name": "RoundTimerStart",
+        "samples": [
+          "Alexa round timer start for {NumberOfRounds} rounds {RoundDuration} each with {RestDuration} rest."
+        ],
+        "slots": [
+          {
+            "name": "NumberOfRounds",
+            "type": "AMAZON.NUMBER",
+            "samples": [
+              "{NumberOfRounds}",
+              "{NumberOfRounds} rounds"
+            ]
+          },
+          {
+            "name": "RoundDuration",
+            "type": "AMAZON.DURATION",
+            "samples": [
+              "{RoundDuration}",
+              "{RoundDuration} in length",
+              "{RoundDuration} duration"
+            ]
+          },
+          {
+            "name": "RestDuration",
+            "type": "AMAZON.DURATION",
+            "samples": [
+              "{RestDuration}",
+              "{RestDuration} in length",
+              "{RestDuration} duration"
+            ]
+          }
+        ]
+      }
+    ],
+    "invocationName": "round timer"
+  },
+  "prompts": [
+    {
+      "id": "Elicit.Intent-RoundTimerStart.IntentSlot-NumberOfRounds",
+      "variations": [
+        {
+          "type": "PlainText",
+          "value": "How many would you like?"
+        }
+      ]
+    },
+    {
+      "id": "Elicit.Intent-RoundTimerStart.IntentSlot-RoundDuration",
+      "variations": [
+        {
+          "type": "PlainText",
+          "value": "How long is each round?"
+        }
+      ]
+    },
+    {
+      "id": "Elicit.Intent-RoundTimerStart.IntentSlot-RestDuration",
+      "variations": [
+        {
+          "type": "PlainText",
+          "value": "How long of rest between rounds?"
+        }
+      ]
+    }
+  ],
+  "dialog": {
+    "intents": [
+      {
+        "name": "RoundTimerStart",
+        "confirmationRequired": false,
+        "prompts": {},
+        "slots": [
+          {
+            "name": "NumberOfRounds",
+            "type": "AMAZON.NUMBER",
+            "elicitationRequired": true,
+            "confirmationRequired": false,
+            "prompts": {
+              "elicitation": "Elicit.Intent-RoundTimerStart.IntentSlot-NumberOfRounds"
+            }
+          },
+          {
+            "name": "RoundDuration",
+            "type": "AMAZON.DURATION",
+            "elicitationRequired": true,
+            "confirmationRequired": false,
+            "prompts": {
+              "elicitation": "Elicit.Intent-RoundTimerStart.IntentSlot-RoundDuration"
+            }
+          },
+          {
+            "name": "RestDuration",
+            "type": "AMAZON.DURATION",
+            "elicitationRequired": true,
+            "confirmationRequired": false,
+            "prompts": {
+              "elicitation": "Elicit.Intent-RoundTimerStart.IntentSlot-RestDuration"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

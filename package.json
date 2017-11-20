@@ -1,0 +1,35 @@
+{
+  "name": "alexa-round-timer",
+  "version": "0.0.1",
+  "description": "An alexa round timer.",
+  "main": "index.js",
+  "scripts": {
+    "test": "s"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/blueshirts/alexa-round-timer.git"
+  },
+  "keywords": [
+    "alexa",
+    "bjj",
+    "timer",
+    "round"
+  ],
+  "author": "Anthony Milano",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/blueshirts/alexa-round-timer/issues"
+  },
+  "homepage": "https://github.com/blueshirts/alexa-round-timer#readme",
+  "dependencies": {
+    "alexa-sdk": "^1.0.x"
+  },
+  "devDependencies": {
+    "chai": "^4.1.x",
+    "grunt": "^1.0.x",
+    "grunt-contrib-jshint": "^1.1.0",
+    "grunt-zip": "^0.17.1",
+    "mocha": "^4.0.x"
+  }
+}
