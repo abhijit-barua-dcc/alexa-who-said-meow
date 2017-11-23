@@ -21,6 +21,9 @@ An Alexa skill for keeping track of who said meow.
 -- Add a count of how many times meow was said.
 -- Add a sound clip.
 
+- Deployment
+-- Look into using https://www.npmjs.com/package/node-lambda for deployments.
+
 - Close Session
 -- Close the session when we're done eliciting.
 

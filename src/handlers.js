@@ -1,17 +1,6 @@
 'use strict'
 
 const assert = require('assert')
-// const data = require('./data')
-
-const messages = {
-  error: '<say-as interpret-as="interjection">Un-fur-tunately</say-as> I am having trouble figuring out who said meow.  Try again right meow.',
-  query: 'Did someone say meow?',
-  query2: 'Did someone else say meow?',
-  requery: 'Sorry, who said meow?',
-  requery2: 'Sorry, did someone else say meow?',
-  unhandled: '<say-as interpret-as="interjection">Un-fur-tunately</say-as> that\'s not something I understand.  Try again right meow.',
-  notSure: 'I don\'t know who said meow, can you tell me who said meow?'
-}
 
 const handleError = function (err) {
   if (err) {
@@ -31,6 +20,10 @@ const emitError = function() {
     'I am having trouble figuring out who said meow.  Try again right meow!'
   ]
   this.emit(':tell', words.join())
+}
+
+const emitUnhandled = function() {
+  this.emit(':tell', 'Un-fur-tunately that\'s not something I understand.  Try again right meow.')
 }
 
 const emitSomeoneSaidMeow = function(person) {
@@ -141,7 +134,7 @@ const SomeoneSaidMeow = function () {
 
 const Unhandled = function () {
   // I don't understand this request.
-  this.emit(messages.unhandled)
+  emitUnhandled().call(this)
 }
 
 exports.ClearIntent = ClearIntent
