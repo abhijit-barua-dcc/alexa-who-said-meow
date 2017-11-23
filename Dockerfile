@@ -27,14 +27,12 @@ RUN npm --silent install -g mocha@^4.0.x
 WORKDIR $workdir
 
 ADD ./package.json .
-ADD ./src/* ./
+ADD ./*.js ./
+ADD ./src/ ./src/
+ADD test/ ./test/
 ADD ./Gruntfile.js .
 ADD .jshintrc .
 
 RUN npm --silent install
 
-ENV SKILL_NAME "DefaultSkillName"
-ENV SKILL_TAG "latest"
-
 CMD grunt
-#CMD tail -f /dev/null

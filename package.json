@@ -1,7 +1,7 @@
 {
-  "name": "alexa-round-timer",
+  "name": "alexa-who-said-meow",
   "version": "0.0.1",
-  "description": "An alexa round timer.",
+  "description": "An Alexa skill to play who said meow.",
   "main": "index.js",
   "scripts": {
     "test": "s"
@@ -23,13 +23,16 @@
   },
   "homepage": "https://github.com/blueshirts/alexa-round-timer#readme",
   "dependencies": {
-    "alexa-sdk": "^1.0.x"
+    "alexa-sdk": "^1.0.x",
+    "async": "^2.6.0",
+    "aws-sdk": "^2.153.0"
   },
   "devDependencies": {
     "chai": "^4.1.x",
     "grunt": "^1.0.x",
+    "grunt-aws-lambda": "^0.13.0",
+    "grunt-contrib-clean": "^1.1.0",
     "grunt-contrib-jshint": "^1.1.0",
-    "grunt-zip": "^0.17.1",
     "mocha": "^4.0.x"
   }
 }
