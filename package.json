@@ -23,9 +23,7 @@
   },
   "homepage": "https://github.com/blueshirts/alexa-round-timer#readme",
   "dependencies": {
-    "alexa-sdk": "^1.0.x",
-    "async": "^2.6.0",
-    "aws-sdk": "^2.153.0"
+    "alexa-sdk": "^1.0.x"
   },
   "devDependencies": {
     "chai": "^4.1.x",
