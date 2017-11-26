@@ -10,28 +10,32 @@
         "samples": []
       },
       {
+        "name": "AMAZON.NoIntent",
+        "samples": []
+      },
+      {
         "name": "AMAZON.StopIntent",
         "samples": []
       },
       {
-        "name": "ClearIntent",
-        "samples": [
-          "clear the current status",
-          "forget who said meow"
-        ],
-        "slots": []
+        "name": "AMAZON.YesIntent",
+        "samples": []
       },
       {
-        "name": "LaunchRequest",
+        "name": "BecauseIntent",
         "samples": [
-          "who said meow",
-          "can you tell me who said meow",
-          "who said meow last"
+          "because {I did|reason}",
+          "because {I wanted to|reason}",
+          "because {I felt like it|reason}",
+          "because",
+          "because {I like to say meow|reason}",
+          "because {I am a mommy|reason}",
+          "because {I am|reason}"
         ],
         "slots": [
           {
-            "name": "person",
-            "type": "AMAZON.US_FIRST_NAME"
+            "name": "reason",
+            "type": "AMAZON.LITERAL"
           }
         ]
       },
@@ -40,18 +44,13 @@
         "samples": [
           "{person} said meow",
           "{person} said meow again",
-          "{person} said meow last"
+          "{person} said meow last",
+          "{person}"
         ],
         "slots": [
           {
             "name": "person",
-            "type": "AMAZON.US_FIRST_NAME",
-            "samples": [
-              "{person} said meow",
-              "{person} just said meow",
-              "I heard {person} say meow",
-              "Yes {person} said meow"
-            ]
+            "type": "AMAZON.US_FIRST_NAME"
           }
         ]
       },
@@ -61,78 +60,8 @@
           "play unhandled intent"
         ],
         "slots": []
-      },
-      {
-        "name": "WhoSaidMeow",
-        "samples": [
-          "who said meow",
-          "right meow",
-          "give me a report",
-          "send me a report",
-          "give me a status",
-          "send me a status update",
-          "status update"
-        ],
-        "slots": [
-          {
-            "name": "person",
-            "type": "AMAZON.US_FIRST_NAME"
-          }
-        ]
       }
     ],
     "invocationName": "who said meow"
-  },
-  "prompts": [
-    {
-      "id": "Confirm.Intent-ClearIntent",
-      "variations": [
-        {
-          "type": "PlainText",
-          "value": "Ok, are you sure you want to clear who said meow?"
-        }
-      ]
-    },
-    {
-      "id": "Elicit.Intent-SomeoneSaidMeow.IntentSlot-person",
-      "variations": [
-        {
-          "type": "PlainText",
-          "value": "Pardon me, who said meow?"
-        },
-        {
-          "type": "PlainText",
-          "value": "Who said meow?"
-        }
-      ]
-    }
-  ],
-  "dialog": {
-    "intents": [
-      {
-        "name": "ClearIntent",
-        "confirmationRequired": true,
-        "prompts": {
-          "confirmation": "Confirm.Intent-ClearIntent"
-        },
-        "slots": []
-      },
-      {
-        "name": "SomeoneSaidMeow",
-        "confirmationRequired": false,
-        "prompts": {},
-        "slots": [
-          {
-            "name": "person",
-            "type": "AMAZON.US_FIRST_NAME",
-            "elicitationRequired": true,
-            "confirmationRequired": false,
-            "prompts": {
-              "elicitation": "Elicit.Intent-SomeoneSaidMeow.IntentSlot-person"
-            }
-          }
-        ]
-      }
-    ]
   }
 }

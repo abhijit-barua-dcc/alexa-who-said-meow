@@ -7,13 +7,11 @@ An Alexa skill for keeping track of who said meow.
     grunt clean
     grunt deploy
     
-### Define Name and Tag Environment Variables
-
-    AWS_REGION=us-east-1
-    AWS_ACCESS_KEY_ID=<key>
-    AWS_SECRET_ACCESS_KEY=<secret>
-
 ## ToDo
+
+- Issues
+-- Fix the no handler.
+-- THe report and clear functions no longer work.
 
 - Features
 -- Randomize phrases
@@ -44,3 +42,13 @@ An Alexa skill for keeping track of who said meow.
 - Update the template docs.
 -- Set Makefile.env
 -- Update the package.json name and version.
+
+## Workflow
+
+- Who Said Meow / Status Report
+-- ? said meow, did someone day meow?
+-- I don't know who said meow, did someone say meow?
+- Clear
+-- Ok
+
+

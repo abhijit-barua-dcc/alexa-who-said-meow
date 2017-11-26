@@ -1,6 +1,6 @@
 {
   "name": "alexa-who-said-meow",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "An Alexa skill to play who said meow.",
   "main": "index.js",
   "scripts": {
