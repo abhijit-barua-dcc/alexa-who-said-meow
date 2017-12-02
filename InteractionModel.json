@@ -1,5 +1,131 @@
 {
   "languageModel": {
+    "types": [
+      {
+        "name": "AMAZON.US_FIRST_NAME",
+        "values": [
+          {
+            "id": null,
+            "name": {
+              "value": "mommy",
+              "synonyms": [
+                "dad",
+                "pappa"
+              ]
+            }
+          },
+          {
+            "id": null,
+            "name": {
+              "value": "daddy",
+              "synonyms": [
+                "mom"
+              ]
+            }
+          },
+          {
+            "id": null,
+            "name": {
+              "value": "grandma",
+              "synonyms": [
+                "granny"
+              ]
+            }
+          },
+          {
+            "id": null,
+            "name": {
+              "value": "grandpa",
+              "synonyms": [
+                "pappy",
+                "grandpappy"
+              ]
+            }
+          },
+          {
+            "id": null,
+            "name": {
+              "value": "brother",
+              "synonyms": [
+                "bro"
+              ]
+            }
+          },
+          {
+            "id": null,
+            "name": {
+              "value": "sister",
+              "synonyms": [
+                "sis"
+              ]
+            }
+          },
+          {
+            "id": null,
+            "name": {
+              "value": "cousin",
+              "synonyms": []
+            }
+          },
+          {
+            "id": null,
+            "name": {
+              "value": "Kaylee",
+              "synonyms": [
+                "Kailey"
+              ]
+            }
+          },
+          {
+            "id": null,
+            "name": {
+              "value": "Tran Bear",
+              "synonyms": [
+                "Tran",
+                "Bear"
+              ]
+            }
+          },
+          {
+            "id": null,
+            "name": {
+              "value": "dog",
+              "synonyms": [
+                "doggie"
+              ]
+            }
+          },
+          {
+            "id": null,
+            "name": {
+              "value": "cat",
+              "synonyms": []
+            }
+          },
+          {
+            "id": null,
+            "name": {
+              "value": "meow",
+              "synonyms": []
+            }
+          },
+          {
+            "id": null,
+            "name": {
+              "value": "dude",
+              "synonyms": []
+            }
+          },
+          {
+            "id": null,
+            "name": {
+              "value": "dudette",
+              "synonyms": []
+            }
+          }
+        ]
+      }
+    ],
     "intents": [
       {
         "name": "AMAZON.CancelIntent",
@@ -24,13 +150,14 @@
       {
         "name": "BecauseIntent",
         "samples": [
-          "because {I did|reason}",
-          "because {I wanted to|reason}",
-          "because {I felt like it|reason}",
-          "because",
-          "because {I like to say meow|reason}",
+          "because {I am |reason}",
+          "because {I am mommy|reason}",
           "because {I am a mommy|reason}",
-          "because {I am|reason}"
+          "because {I felt like it|reason}",
+          "because {I wanted to|reason}",
+          "because {I did|reason}",
+          "because {I|reason}",
+          "because {of|reason}"
         ],
         "slots": [
           {
@@ -38,6 +165,16 @@
             "type": "AMAZON.LITERAL"
           }
         ]
+      },
+      {
+        "name": "ForgetIntent",
+        "samples": [
+          "forget who said meow",
+          "clear",
+          "clear who said meow",
+          "forget"
+        ],
+        "slots": []
       },
       {
         "name": "SomeoneSaidMeow",
@@ -56,9 +193,7 @@
       },
       {
         "name": "Unhandled",
-        "samples": [
-          "play unhandled intent"
-        ],
+        "samples": [],
         "slots": []
       }
     ],
