@@ -63,4 +63,5 @@ typings/
 
 .idea
 NERD*
-
+env.yml
+.serverless

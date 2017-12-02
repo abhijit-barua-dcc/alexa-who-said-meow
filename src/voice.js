@@ -107,16 +107,14 @@ const yoInterjections = ['yo', 'aw man', 'booya', 'd\'oh', 'dynomite', 'great sc
 
 function yo() {
   const i = random(0, yoInterjections.length)
-  const interjection = yoInterjections[i]
-  return xloud(slow(high(`${interjection}!`)))
+  return yoInterjections[i]
 }
 
 const snapInterjections = ['oh snap', 'yowzer', 'woo hoo', 'uh oh', 'mamma mia', 'good grief', 'dun dun dun']
 
 function snap() {
   const i = random(0 ,snapInterjections.length)
-  const interjection = snapInterjections[i]
-  return loud(slow(low(`${interjection}!`)))
+  return snapInterjections[i]
 }
 
 function random(min, max) {
