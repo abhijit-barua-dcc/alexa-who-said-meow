@@ -10,24 +10,22 @@ puglint:
 
 build: jshint templates
 
-deploy: beta
-
 remove:
 	serverless remove
 
-beta: build
-	serverless deploy
+stack1: build
+	serverless deploy --stage stack1
 
-prod: build
-	serverless deploy --stage prod
+stack2: build
+	serverless deploy --stage stack2
 
-update-beta: build
-	serverless deploy --function skill
+update-stack1: build
+	serverless deploy --function skill --stage stack1
 
-update-prod: build
-	serverless deploy --function skill --stage prod
+update-stack2: build
+	serverless deploy --function skill --stage stack2
 
 clean:
 	rm -rf ./ssml-speech.js
 
-.PHONY: init jshint puglint templates build deploy remove beta prod update-beta update-prod clean
+.PHONY: init jshint puglint templates build deploy remove stack1 stack2 update-stack1 update-stack2 clean
