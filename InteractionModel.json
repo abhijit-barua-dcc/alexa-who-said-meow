@@ -157,7 +157,11 @@
           "because {I wanted to|reason}",
           "because {I did|reason}",
           "because {I|reason}",
-          "because {of|reason}"
+          "because {of|reason}",
+          "cause {I wanted to|reason}",
+          "cause {of a reason|reason}",
+          "{she wanted to|reason}",
+          "{he told me to|reason}"
         ],
         "slots": [
           {
